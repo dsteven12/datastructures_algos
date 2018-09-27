@@ -1,9 +1,9 @@
 function charCount(str) {
-    str = str.toLowerCase();
     newObj = {};
     for(var char of str) {
         if(isAlphaNumeric(char)) {
-          newObj[char] = newObj[char] ++ || 1;
+            char = char.toLowerCase();
+            newObj[char] = newObj[char] ++ || 1;
         } 
     }
     return newObj;

@@ -3,7 +3,7 @@ function charCount(str) {
     for(var char of str) {
         if(isAlphaNumeric(char)) {
             char = char.toLowerCase();
-            newObj[char] = newObj[char] ++ || 1;
+            newObj[char] = (newObj[char] || 0) + 1;
         } 
     }
     return newObj;

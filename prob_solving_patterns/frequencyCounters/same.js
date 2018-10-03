@@ -15,9 +15,13 @@ function same(arr1, arr2) {
         
     }
     for(let key in frequencyCounter1) {
+        // If the the frequencyCounter1 keys squared isn't in frequencyCounter2, 
+        // return false.
         if(!(key ** 2 in frequencyCounter2)) {
             return false;
         }
+        // If the frequencyCounter2 values is not equal to frequencyCounter1 values,
+        // return false. 
         if(frequencyCounter2[key ** 2] !== frequencyCounter1[key]) {
             return false;
         }
